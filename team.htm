@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thunderstruck Robotics</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .team-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .team-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 10%;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h4 {
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,7 +63,15 @@
                 <p>Innovating the future of robotics and competing at the highest level. Get ready to be inspired and challenge the norm.</p>
                 <a href="contact.htm" class="cta">Get In Touch</a>
                 <div class="socials">
-                    <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -36,6 +80,37 @@
             <h3>Pushing the Limits</h3>
             <p>Our latest projects are breaking barriers in the world of robotics, with innovative designs and cutting-edge technology.</p>
             <a href="projects.htm" class="cta-dark">Our Team</a>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="Picture1.jpg" alt="Team Member 1">
+                    <p>Lead Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Picture2.jpg" alt="Team Member 2">
+                    <p>Project Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="Picture3.jpg" alt="Team Member 3">
+                    <p>Software Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Picture4.jpg" alt="Team Member 4">
+                    <p>Hardware Specialist</p>
+                </div>
+                <div class="team-member">
+                    <img src="Picture5.jpg" alt="Team Member 5">
+                    <p>Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="Picture6.jpg" alt="Team Member 6">
+                    <p>Robotics Expert</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
