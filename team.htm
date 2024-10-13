@@ -23,6 +23,7 @@
             padding: 0 10%;
         }
         .team-member {
+            position: relative;
             text-align: center;
         }
         .team-member img {
@@ -31,13 +32,16 @@
             height: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .team-member h4 {
-            margin-top: 15px;
-            font-size: 1.2em;
-        }
         .team-member p {
-            font-size: 0.9em;
-            color: #000000;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1em;
         }
     </style>
 </head>
