@@ -23,25 +23,29 @@
             padding: 0 10%;
         }
         .team-member {
-            position: relative;
             text-align: center;
         }
-        .team-member img {
+        .member-box {
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .member-box:hover {
+            transform: scale(1.05);
+        }
+        .member-box img {
             width: 100%;
             max-width: 450px;
             height: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 10px;
         }
-        .team-member p {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
+        .member-box p {
             font-size: 1em;
+            color: #000;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -60,38 +64,45 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Thunderstruck Robotics</h1>
-                    <section class="team-section">
-                        <h2>Meet Our Team</h2>
-                        <div class="team-grid">
-                            <div class="team-member">
-                                <img src="Picture1.jpg" alt="Team Member 1">
-                                <p>Social Media Manager</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture2.jpg" alt="Team Member 2">
-                                <p>Record Keeper</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture3.jpg" alt="Team Member 3">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture4.jpg" alt="Team Member 4">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture5.jpg" alt="Team Member 5">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture6.jpg" alt="Team Member 6">
-                                <p>Engineer</p>
-                            </div>
-                        </div>
-                    </section>
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture1.jpg" alt="Team Member 1">
+                        <p>Engineer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture2.jpg" alt="Team Member 2">
+                        <p>Engineer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture3.jpg" alt="Team Member 3">
+                        <p>Engineer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture4.jpg" alt="Team Member 4">
+                        <p>Engineer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture5.jpg" alt="Team Member 5">
+                        <p>Engineer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-box">
+                        <img src="Picture6.jpg" alt="Team Member 6">
+                        <p>Engineer</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
