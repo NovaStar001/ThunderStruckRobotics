@@ -2,7 +2,7 @@
     .team-section {
         padding: 20px 0 80px;
         text-align: center;
-        min-height: 100vh;
+        min-height: 100vh; /* Ensures it takes enough space to avoid overlap */
     }
     .team-section h2 {
         font-size: 2em;
@@ -10,9 +10,9 @@
     }
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive column widths */
         gap: 20px;
-        padding: 0 5%;
+        padding: 0 5%; /* Adjusts the padding on sides for a balanced look */
     }
     .team-member {
         background-color: #000000;
@@ -22,7 +22,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: center;
         color: inherit;
-        max-width: 100%;
+        max-width: 100%; /* Ensures no overflow */
     }
     .team-member:hover {
         transform: translateY(-8px);
@@ -42,22 +42,15 @@
         font-size: 1em;
         margin-top: 10px;
     }
-    /* Adjust layout for large, ultra-wide monitors */
-    @media (min-width: 1920px) {
-        .team-grid {
-            grid-template-columns: repeat(4, minmax(200px, 300px)); /* Limits tile width to prevent excessive size */
-            gap: 30px; /* Adds extra space between tiles */
-        }
-    }
-    /* Media query for general smaller screens */
+    /* Media query to adjust layout on smaller screens */
     @media (max-width: 1200px) {
         .team-section {
-            padding-bottom: 120px;
+            padding-bottom: 120px; /* Extra bottom padding for overlap prevention */
         }
     }
     @media (max-width: 768px) {
         .team-grid {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted column width for smaller screens */
         }
         .team-member p, .team-member h4 {
             font-size: 0.8em;
