@@ -2,56 +2,63 @@
     .team-section {
         padding: 20px 0 80px;
         text-align: center;
+        min-height: 100vh; /* Ensures it takes enough space to avoid overlap */
     }
     .team-section h2 {
-        font-size: 2.2em;
+        font-size: 2em;
         margin-bottom: 20px;
     }
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px; /* Reduce gap between tiles */
-        padding: 0 8%; /* Slightly smaller padding on the sides */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive column widths */
+        gap: 20px;
+        padding: 0 5%; /* Adjusts the padding on sides for a balanced look */
     }
     .team-member {
-        text-align: center;
         background-color: #000000;
         padding: 10px;
-        max-width: 160px; /* Further limit the tile width */
-        margin: auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px; /* Smaller border radius */
+        border-radius: 10px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-decoration: none;
+        text-align: center;
         color: inherit;
+        max-width: 100%; /* Ensures no overflow */
     }
     .team-member:hover {
-        transform: translateY(-8px); /* Reduce hover effect */
+        transform: translateY(-8px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
     .team-member img {
         width: 100%;
         height: auto;
-        border-radius: 8px; /* Smaller border radius */
-        margin-bottom: 10px; /* Smaller margin */
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
     .team-member p {
         color: #ffffff;
-        font-size: 0.85em; /* Reduce font size */
+        font-size: 0.85em;
     }
     .team-member h4 {
+        font-size: 1em;
         margin-top: 10px;
-        font-size: 1em; /* Reduce heading font size */
     }
-    /* Media query to adjust grid for smaller screens */
-    @media (max-width: 900px) {
-        .team-grid {
-            grid-template-columns: repeat(2, 1fr);
+    /* Media query to adjust layout on smaller screens */
+    @media (max-width: 1200px) {
+        .team-section {
+            padding-bottom: 120px; /* Extra bottom padding for overlap prevention */
         }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .team-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted column width for smaller screens */
+        }
+        .team-member p, .team-member h4 {
+            font-size: 0.8em;
+        }
+    }
+    @media (max-width: 480px) {
+        .team-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         }
     }
 </style>
