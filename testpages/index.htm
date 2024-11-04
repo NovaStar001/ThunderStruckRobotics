@@ -70,6 +70,12 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        .chat-message {
+            color: black;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body> 
@@ -134,13 +140,14 @@
         async function sendMessage() {
             const userMessage = document.getElementById("userMessage").value;
             if (userMessage.trim() === "") return;
-
+        
             // Add user's message to the chat
             const chatBody = document.getElementById("chatBody");
             const userMessageDiv = document.createElement("div");
+            userMessageDiv.className = "chat-message";  // Add class for styling
             userMessageDiv.textContent = "You: " + userMessage;
             chatBody.appendChild(userMessageDiv);
-
+        
             // Send request to Flask API
             try {
                 const response = await fetch("http://localhost:5000/generate", {
@@ -150,19 +157,21 @@
                 });
                 const data = await response.json();
                 const aiMessage = data.response;
-
+        
                 // Add AI's response to the chat
                 const aiMessageDiv = document.createElement("div");
+                aiMessageDiv.className = "chat-message";  // Add class for styling
                 aiMessageDiv.textContent = "AI: " + aiMessage;
                 chatBody.appendChild(aiMessageDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;  // Scroll to the bottom
             } catch (error) {
                 console.error("Error:", error);
                 const errorMessageDiv = document.createElement("div");
+                errorMessageDiv.className = "chat-message";  // Add class for styling
                 errorMessageDiv.textContent = "AI: Sorry, there was an error connecting to the server.";
                 chatBody.appendChild(errorMessageDiv);
             }
-
+        
             document.getElementById("userMessage").value = "";  // Clear the input
         }
     </script>
