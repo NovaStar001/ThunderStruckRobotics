@@ -6,161 +6,6 @@
     <title>Thunderstruck Robotics</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Set a general background color */
-            color: #333; /* General text color */
-            margin: 0;
-        }
-
-        header {
-            background: #000; /* Header background */
-            color: #fff; /* Header text color */
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h2 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .hero {
-            background: url('hero-background.jpg') no-repeat center center/cover; /* Add a background image */
-            min-height: 50vh; /* Set a minimum height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .team-section {
-            padding: 40px 0 100px; /* Ensure enough space at the bottom */
-            text-align: center;
-            background-color: #fff; /* White background for the section */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        }
-
-        .team-section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Four tiles in the top row */
-            gap: 20px;
-            padding: 0 5%;
-            max-width: 100%;
-        }
-
-        .team-member {
-            background-color: #000000; /* Maintain the background color */
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            color: #ffffff; /* Ensure text is white */
-        }
-
-        .team-member:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .team-member img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .team-member p {
-            font-size: 0.85em;
-        }
-
-        .team-member h4 {
-            font-size: 1em;
-            margin-top: 10px;
-        }
-
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 1200px) {
-            .team-section {
-                padding-bottom: 120px;
-            }
-
-            .team-grid {
-                grid-template-columns: repeat(3, 1fr); /* Three tiles per row on medium screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr); /* Two tiles per row on small screens */
-            }
-
-            .team-member p, .team-member h4 {
-                font-size: 0.8em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .team-grid {
-                grid-template-columns: 1fr; /* One tile per row on very small screens */
-            }
-        }
-
-        .highlight {
-            padding: 20px;
-            text-align: center;
-            background: #282c34;
-            color: white;
-        }
-
-        .highlight h3 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        .highlight p {
-            margin: 10px 0;
-        }
-
-        .cta-dark {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
-            background: #555;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #000;
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -179,8 +24,10 @@
     <main>
         <section class="hero">
             <h1>Thunderstruck Robotics</h1>
+            <p>Innovating the future with robotics technology.</p>
+            <a href="#team" class="cta">Meet Our Team</a>
         </section>
-        <section class="team-section">
+        <section class="team-section" id="team">
             <h2>Meet Our Team</h2>
             <div class="team-grid">
                 <a href="member1-profile.htm" class="team-member">
@@ -229,5 +76,57 @@
     <footer>
         <p>&copy; 2024 Nexus Technologies | <a href="contact.htm">Contact Us</a></p>
     </footer>
+
+    <style>
+        .team-section {
+            padding: 40px 0; /* Ensure padding is sufficient */
+            text-align: center;
+            background-color: #000; /* Background color for the team section */
+        }
+
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 0 5%;
+        }
+
+        .team-member {
+            background-color: #000000; /* Maintain the background color */
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #ffffff; /* Ensure text is white */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .team-member h4 {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .team-member p {
+            font-size: 0.85em;
+        }
+    </style>
 </body>
 </html>
