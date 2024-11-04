@@ -1,56 +1,57 @@
 <style>
     .team-section {
-        padding: 20px 0 80px; /* Extra padding at the bottom */
+        padding: 20px 0 80px;
         text-align: center;
     }
     .team-section h2 {
-        font-size: 2.5em;
+        font-size: 2.2em;
         margin-bottom: 20px;
     }
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
-        gap: 20px;
-        padding: 0 10%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px; /* Reduce gap between tiles */
+        padding: 0 8%; /* Slightly smaller padding on the sides */
     }
     .team-member {
         text-align: center;
         background-color: #000000;
         padding: 10px;
-        max-width: 200px; /* Limit the max width of each tile */
-        margin: auto; /* Center-align tiles */
+        max-width: 160px; /* Further limit the tile width */
+        margin: auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
+        border-radius: 10px; /* Smaller border radius */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-decoration: none;
         color: inherit;
     }
     .team-member:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px); /* Reduce hover effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
     .team-member img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
-        margin-bottom: 15px;
+        border-radius: 8px; /* Smaller border radius */
+        margin-bottom: 10px; /* Smaller margin */
     }
     .team-member p {
         color: #ffffff;
+        font-size: 0.85em; /* Reduce font size */
     }
     .team-member h4 {
-        margin-top: 15px;
-        font-size: 1.2em;
+        margin-top: 10px;
+        font-size: 1em; /* Reduce heading font size */
     }
     /* Media query to adjust grid for smaller screens */
     @media (max-width: 900px) {
         .team-grid {
-            grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     @media (max-width: 600px) {
         .team-grid {
-            grid-template-columns: 1fr; /* Switch to 1 column */
+            grid-template-columns: 1fr;
         }
     }
 </style>
