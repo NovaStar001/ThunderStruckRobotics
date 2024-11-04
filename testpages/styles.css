@@ -1,6 +1,6 @@
 <style>
     .team-section {
-        padding: 20px 0 80px;
+        padding: 20px 0 100px; /* Ensure enough space at the bottom */
         text-align: center;
         min-height: 100vh;
     }
@@ -10,9 +10,10 @@
     }
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, 1fr); /* Four tiles in the top row */
         gap: 20px;
         padding: 0 5%;
+        max-width: 100%;
     }
     .team-member {
         background-color: #000000;
@@ -42,22 +43,18 @@
         font-size: 1em;
         margin-top: 10px;
     }
-    /* Adjust layout for large, ultra-wide monitors */
-    @media (min-width: 1920px) {
-        .team-grid {
-            grid-template-columns: repeat(4, minmax(200px, 300px)); /* Limits tile width to prevent excessive size */
-            gap: 30px; /* Adds extra space between tiles */
-        }
-    }
-    /* Media query for general smaller screens */
+    /* Responsive adjustments for smaller screens */
     @media (max-width: 1200px) {
         .team-section {
             padding-bottom: 120px;
         }
+        .team-grid {
+            grid-template-columns: repeat(3, 1fr); /* Three tiles per row on medium screens */
+        }
     }
     @media (max-width: 768px) {
         .team-grid {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* Two tiles per row on small screens */
         }
         .team-member p, .team-member h4 {
             font-size: 0.8em;
@@ -65,7 +62,7 @@
     }
     @media (max-width: 480px) {
         .team-grid {
-            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            grid-template-columns: repeat(1, 1fr); /* One tile per row on very small screens */
         }
     }
 </style>
