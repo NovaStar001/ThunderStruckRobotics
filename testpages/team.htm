@@ -8,55 +8,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .team-section {
-            padding: 20px 0 60px; /* Extra padding at the bottom */
+            padding: 20px 0 100px; /* Ensure enough space at the bottom */
             text-align: center;
+            min-height: 100vh;
         }
         .team-section h2 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 20px;
         }
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns on top */
+            grid-template-columns: repeat(4, 1fr); /* Four tiles in the top row */
             gap: 20px;
-            padding: 0 10%;
+            padding: 0 5%;
+            max-width: 100%;
         }
         .team-member {
-            text-align: center;
             background-color: #000000;
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
+            text-align: center;
             color: inherit;
+            max-width: 100%;
         }
         .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .team-member img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
         .team-member p {
             color: #ffffff;
+            font-size: 0.85em;
         }
         .team-member h4 {
-            margin-top: 15px;
-            font-size: 1.2em;
+            font-size: 1em;
+            margin-top: 10px;
         }
-        /* Media query to adjust grid for smaller screens */
-        @media (max-width: 900px) {
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 1200px) {
+            .team-section {
+                padding-bottom: 120px;
+            }
             .team-grid {
-                grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+                grid-template-columns: repeat(3, 1fr); /* Three tiles per row on medium screens */
             }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .team-grid {
-                grid-template-columns: 1fr; /* Switch to 1 column */
+                grid-template-columns: repeat(2, 1fr); /* Two tiles per row on small screens */
+            }
+            .team-member p, .team-member h4 {
+                font-size: 0.8em;
+            }
+        }
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: repeat(1, 1fr); /* One tile per row on very small screens */
             }
         }
     </style>
