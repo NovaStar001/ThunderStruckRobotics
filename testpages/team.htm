@@ -76,22 +76,23 @@
             text-align: center;
             background-color: #000; /* Background color for the team section */
         }
-
+        
         .team-section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
+            color: #ffffff; /* Ensure the heading is white */
         }
-
+        
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
             gap: 20px;
-            padding: 0 5%;
+            padding: 0 5%; /* Side padding to create space around the grid */
         }
-
+        
         .team-member {
-            background-color: #000000; /* Maintain the background color */
-            padding: 10px;
+            background-color: #111; /* Background color for the tiles */
+            padding: 15px; /* Increased padding for a better look */
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -99,24 +100,24 @@
             color: #ffffff; /* Ensure text is white */
             text-decoration: none; /* Remove underline from links */
         }
-
+        
         .team-member:hover {
             transform: translateY(-8px);
             box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
         }
-
+        
         .team-member img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
         }
-
+        
         .team-member h4 {
             font-size: 1em;
             margin-top: 10px;
         }
-
+        
         .team-member p {
             font-size: 0.85em;
         }
