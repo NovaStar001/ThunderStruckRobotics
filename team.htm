@@ -5,41 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thunderstruck Robotics</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome CDN for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .team-section {
-            padding: 10px 0;
-            text-align: center;
-        }
-        .team-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 0 10%;
-        }
-        .team-member {
-            text-align: center;
-        }
-        .team-member img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .team-member h4 {
-            margin-top: 15px;
-            font-size: 1.2em;
-        }
-        .team-member p {
-            font-size: 0.9em;
-            color: #000000;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -57,48 +23,104 @@
     </header>
     <main>
         <section class="hero">
-            <div class="hero-text">
-                <h1>Thunderstruck Robotics</h1>
-                    <section class="team-section">
-                        <h2>Meet Our Team</h2>
-                        <div class="team-grid">
-                            <div class="team-member">
-                                <img src="Picture1.jpg" alt="Team Member 1">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture2.jpg" alt="Team Member 2">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture3.jpg" alt="Team Member 3">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture4.jpg" alt="Team Member 4">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture5.jpg" alt="Team Member 5">
-                                <p>Engineer</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="Picture6.jpg" alt="Team Member 6">
-                                <p>Engineer</p>
-                            </div>
-                        </div>
-                    </section>
+            <h1>Thunderstruck Robotics</h1>
+            <p>Innovating the future with robotics technology.</p>
+            <a href="#team" class="cta">Meet Our Team</a>
+        </section>
+        <section class="team-section" id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <a href="member1-profile.htm" class="team-member">
+                    <img src="Picture1.jpg" alt="Team Member 1">
+                    <p>Social Media Manager</p>
+                </a>
+                <a href="member2-profile.htm" class="team-member">
+                    <img src="Picture2.jpg" alt="Team Member 2">
+                    <p>Notetaker</p>
+                </a>
+                <a href="member3-profile.htm" class="team-member">
+                    <img src="Picture3.jpg" alt="Team Member 3">
+                    <p>Engineer</p>
+                </a>
+                <a href="member4-profile.htm" class="team-member">
+                    <img src="Picture4.jpg" alt="Team Member 4">
+                    <p>Engineer</p>
+                </a>
+                <a href="member5-profile.htm" class="team-member">
+                    <img src="Picture5.jpg" alt="Team Member 5">
+                    <p>Engineer</p>
+                </a>
+                <a href="member6-profile.htm" class="team-member">
+                    <img src="Picture6.jpg" alt="Team Member 6">
+                    <p>Engineer</p>
+                </a>
+                <a href="member7-profile.htm" class="team-member">
+                    <img src="Picture7.jpg" alt="Team Member 7">
+                    <p>Programmer</p>
+                </a>
             </div>
         </section>
-    </main>
-    <section class="highlight">
+        <section class="highlight">
             <h3>Pushing the Limits</h3>
             <p>Our latest projects are breaking barriers in the world of robotics, with innovative designs and cutting-edge technology.</p>
-            <br>
-            <a href="projects.htm" class="cta-dark">Our Team</a>
-    </section>
+            <a href="projects.htm" class="cta-dark">View Our Projects</a>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Nexus Technologies | <a href="contact.htm">Contact Us</a></p>
     </footer>
+
+    <style>
+        .team-section {
+            padding: 40px 0; /* Ensure padding is sufficient */
+            text-align: center;
+            background-color: #000; /* Background color for the team section */
+        }
+        
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* Ensure the heading is white */
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 0 5%; /* Side padding to create space around the grid */
+        }
+        
+        .team-member {
+            background-color: #111; /* Background color for the tiles */
+            padding: 15px; /* Increased padding for a better look */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #ffffff; /* Ensure text is white */
+            text-decoration: none; /* Remove underline from links */
+        }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .team-member h4 {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        
+        .team-member p {
+            font-size: 0.85em;
+        }
+    </style>
 </body>
 </html>
