@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thunderstruck Robotics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body> 
-    <header>
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.htm" aria-label="Home">Home</a></li>
+                <li><a href="about.htm" aria-label="About Us">About Us</a></li>
+                <li><a href="team.htm" aria-label="Our Team">Our Team</a></li>
+                <li><a href="contact.htm" aria-label="Contact">Contact</a></li>
+            </ul>
+        </nav>
         <div class="logo">
             <h2>THUNDERSTRUCK</h2>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.htm">Home</a></li>
-                <li><a href="about.htm">About Us</a></li>
-                <li><a href="team.htm">Our Team</a></li>
-                <li><a href="contact.htm">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
+    <main role="main">
         <section class="hero">
             <div class="hero-text">
                 <h1>Thunderstruck Robotics</h1>
@@ -34,10 +35,10 @@
         <h3>Pushing the Limits</h3>
         <p>Our latest projects are breaking barriers in the world of robotics, with innovative designs and cutting-edge technology.</p>
         <br>
-        <a href="projects.htm" class="cta-dark">Our Team</a>
+        <a href="projects.htm" class="cta-dark" aria-label="View our team's projects">Our Team</a>
     </section>
-    <footer>
-        <p>&copy; 2024 Nexus Technologies | <a href="contact.htm">Contact Us</a></p>
+    <footer role="contentinfo">
+        &copy; 2024 Nexus Technologies | <a href="contact.htm" aria-label="Contact us for more information">Contact Us</a>
     </footer>
 </body>
 </html>
