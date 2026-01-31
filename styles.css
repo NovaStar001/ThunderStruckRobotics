@@ -49,7 +49,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  background: #ad03fc;
+  background: linear-gradient(270deg, #ff2c8e, #ffffff);
   text-align: center;
 }
 
