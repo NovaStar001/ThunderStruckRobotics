@@ -30,9 +30,87 @@
                 </video>
             </div>
         </section>
+        <section class="team-section" id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <a class="team-member">
+                    <img src="MS1.jpg" alt="Team Member 0">
+                </a>
+                <a class="team-member">
+                    <img src="MS2.jpg" alt="Team Member 1">
+                </a>
+                <a class="team-member">
+                    <img src="TT1.jpg" alt="Team Member 2">
+                </a>
+                <a class="team-member">
+                    <img src="TT2.jpg" alt="Team Member 3">
+                </a>
+                <a class="team-member">
+                    <img src="ENG1.jpg" alt="Team Member 4">
+                </a>
+                <a class="team-member">
+                    <img src="ENG2.jpg" alt="Team Member 7">
+                </a>
+                <a class="team-member">
+                    <img src="TP1.jpg" alt="Team Member 7">
+                </a>
+            </div>
+        </section>
     </main>
     <footer role="contentinfo">
         &copy; 2024 Nexus Technologies | Thunderstruck</a>
     </footer>
+    <style>
+        .team-section {
+            padding: 40px 0; /* Ensure padding is sufficient */
+            text-align: center;
+            background-color: #000; /* Background color for the team section */
+        }
+        
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* Ensure the heading is white */
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 0 5%; /* Side padding to create space around the grid */
+        }
+        
+        .team-member {
+            background-color: #111; /* Background color for the tiles */
+            padding: 15px; /* Increased padding for a better look */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #ffffff; /* Ensure text is white */
+            text-decoration: none; /* Remove underline from links */
+        }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .team-member h4 {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        
+        .team-member p {
+            font-size: 0.85em;
+        }
+    </style>
 </body>
 </html>
