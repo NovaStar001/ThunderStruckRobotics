@@ -48,6 +48,16 @@ nav ul li a {
     text-align: center;
 }
 
+.hero-extended {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: #8d00c9;
+    text-align: center;
+}
+
+
 .hero h1 {
     font-size: 4rem;
     color: #fff;
